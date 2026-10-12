@@ -1,0 +1,10 @@
+{
+  "name": "intel-extension",
+  "private": true,
+  "type": "module",
+  "description": "Real-time fact-checker for memecoin narratives, inside X, Axiom, GMGN and Padre",
+  "license": "MIT",
+  "scripts": {
+    "build": "node build.js"
+  }
+}

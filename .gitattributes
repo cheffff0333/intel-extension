@@ -1,0 +1,6 @@
+# One line ending everywhere, so a build on Windows and a build on Linux
+# produce the same files. The extension does not care, but a diff full of
+# phantom whitespace changes makes a pull request unreadable.
+* text=auto eol=lf
+
+*.png binary
