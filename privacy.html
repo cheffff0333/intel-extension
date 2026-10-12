@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Intel — Privacy Policy</title>
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Text', sans-serif;
+      background: #0d0d0f;
+      color: rgba(255,255,255,0.75);
+      line-height: 1.7;
+      padding: 60px 20px;
+    }
+    .container { max-width: 680px; margin: 0 auto; }
+    h1 { font-size: 28px; font-weight: 600; color: #fff; margin-bottom: 8px; }
+    .meta { font-size: 13px; color: rgba(255,255,255,0.3); margin-bottom: 48px; }
+    h2 { font-size: 16px; font-weight: 600; color: #fff; margin: 36px 0 12px; }
+    p { font-size: 14px; margin-bottom: 12px; }
+    ul { padding-left: 20px; margin-bottom: 12px; }
+    li { font-size: 14px; margin-bottom: 6px; }
+    a { color: #5b9cf6; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .divider { height: 0.5px; background: rgba(255,255,255,0.08); margin: 48px 0; }
+    .badge {
+      display: inline-block;
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      padding: 3px 10px;
+      border-radius: 20px;
+      background: rgba(74,222,128,0.08);
+      color: #4ade80;
+      border: 0.5px solid rgba(74,222,128,0.15);
+      margin-bottom: 24px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="badge">Legal</div>
+    <h1>Privacy Policy</h1>
+    <p class="meta">Intel · Last updated: September 1, 2026</p>
+
+    <h2>1. Introduction</h2>
+    <p>Intel ("we", "our", or "us") is a real-time narrative fact-checking tool for memecoin traders. This Privacy Policy explains how we collect, use, and protect information when you use the Intel website and Chrome extension.</p>
+    <p>By using Intel, you agree to the collection and use of information as described in this policy.</p>
+
+    <h2>2. Information We Collect</h2>
+    <p>We collect only what is strictly necessary to provide the service:</p>
+    <ul>
+      <li><strong>Google account identifier and email address</strong> — received when you sign in with Google, and used to identify your account. We receive only your account ID and email; we never see your Google password.</li>
+      <li><strong>Auth token</strong> — a unique identifier for your account, stored locally in your browser and sent with each request to authenticate it. It contains no personal information and you can replace it at any time from your dashboard.</li>
+      <li><strong>Session cookie</strong> — a random identifier that keeps you signed in on the website. It carries no personal information and is deleted when you sign out.</li>
+      <li><strong>Post content</strong> — the text of the post you choose to fact-check, together with its identifier. Sent to our API only when you click the Intel button, and only for that post.</li>
+      <li><strong>Usage counts</strong> — how many checks you have used in your current period, used solely to enforce plan limits.</li>
+      <li><strong>Payment records</strong> — for a purchase we store the amount, the price quoted, and the Solana transaction identifier, so the payment can be matched to your account and shown to you later.</li>
+      <li><strong>IP address</strong> — used transiently for rate limiting. Not stored alongside your account or your checks.</li>
+    </ul>
+
+    <p>Payments are made in SOL on the Solana blockchain, which is public by design: the transaction itself, including the paying wallet address, is visible to anyone. We do not ask for, store, or link your wallet address to your account, and we never handle card details or bank information.</p>
+
+    <h2>3. Information We Do Not Collect</h2>
+    <ul>
+      <li>We do not collect your browsing history</li>
+      <li>We do not collect your IP address beyond what is required for rate limiting</li>
+      <li>We do not collect your name, date of birth, or any identity document</li>
+      <li>We do not store your wallet address or link it to your account</li>
+      <li>We do not have access to your Google password or any Google data beyond your account ID and email address</li>
+      <li>We do not read or transmit posts you have not explicitly clicked Intel on</li>
+      <li>We do not use tracking pixels, advertising cookies, or third-party analytics. The only cookie we set is the one that keeps you signed in.</li>
+      <li>We do not sell, rent, or share your data with third parties for marketing purposes</li>
+      <li>We do not collect data from pages you visit outside of the supported platforms (X.com, Axiom, Padre, GMGN)</li>
+    </ul>
+
+    <h2>4. How We Use Your Information</h2>
+    <ul>
+      <li><strong>Authentication</strong> — your auth token is used to identify your account and enforce plan limits</li>
+      <li><strong>Fact-checking</strong> — tweet text is sent to an AI model with web and X search enabled to generate verdicts</li>
+      <li><strong>Caching</strong> — verdicts are stored in our database and cache to serve repeat checks instantly without additional AI calls</li>
+      <li><strong>Billing</strong> — matching an incoming Solana payment to the invoice you created, and applying the credits you bought</li>
+      <li><strong>Abuse prevention</strong> — rate limiting and quota enforcement to ensure fair usage across all users</li>
+    </ul>
+
+    <h2>5. Third-Party Services</h2>
+    <p>Intel uses the following third-party services to operate:</p>
+    <ul>
+      <li><strong>xAI (Grok)</strong> — AI model and search provider. Post text is sent to xAI's API for fact-checking. Subject to <a href="https://x.ai/legal/privacy-policy" target="_blank">xAI's Privacy Policy</a>.</li>
+      <li><strong>Google</strong> — sign-in provider. Subject to <a href="https://policies.google.com/privacy" target="_blank">Google's Privacy Policy</a>.</li>
+      <li><strong>CoinGecko</strong> — public price data, used to convert a USD price into a SOL amount at checkout. No personal information is sent.</li>
+      <li><strong>Solana RPC providers</strong> — used to read the public blockchain and confirm that a payment has settled. No personal information is sent.</li>
+      <li><strong>Supabase</strong> — database provider for storing user accounts and verdict history. Subject to <a href="https://supabase.com/privacy" target="_blank">Supabase's Privacy Policy</a>.</li>
+      <li><strong>Upstash</strong> — Redis cache provider for quota tracking and verdict caching. Subject to <a href="https://upstash.com/privacy" target="_blank">Upstash's Privacy Policy</a>.</li>
+      <li><strong>Railway</strong> — cloud hosting provider for our API. Subject to <a href="https://railway.app/legal/privacy" target="_blank">Railway's Privacy Policy</a>.</li>
+    </ul>
+
+    <h2>6. Data Retention</h2>
+    <ul>
+      <li><strong>Verdicts</strong> — stored permanently in our database as part of our fact-check history dataset</li>
+      <li><strong>Cached verdicts</strong> — held in our cache for 30 minutes, extended to one hour each time the same post is checked again, then automatically deleted</li>
+      <li><strong>User accounts</strong> — retained as long as your account is active</li>
+      <li><strong>Credit counts</strong> — reset at the start of each billing period. Free trial credits are counted for the life of the account and do not reset.</li>
+      <li><strong>Payment records</strong> — kept for accounting purposes</li>
+      <li><strong>Sessions</strong> — expire after 30 days, or immediately when you sign out</li>
+    </ul>
+
+    <h2>7. Data Security</h2>
+    <p>We take reasonable measures to protect your information:</p>
+    <ul>
+      <li>All API communication is encrypted via HTTPS</li>
+      <li>Auth tokens are randomly generated UUIDs with no personal information encoded</li>
+      <li>Database access is restricted to our backend services only</li>
+      <li>No sensitive credentials are stored in the open-source extension code</li>
+    </ul>
+
+    <h2>8. Your Rights</h2>
+    <p>You have the right to:</p>
+    <ul>
+      <li><strong>Opt out</strong> — disconnect the extension at any time from its popup, or remove it from your browser. Either stops all further collection immediately.</li>
+      <li><strong>Choose what is checked</strong> — nothing is sent to our API unless you click the Intel button on a specific post.</li>
+      <li><strong>Replace your token</strong> — rotate it from your dashboard at any time, which immediately invalidates the previous one.</li>
+      <li><strong>Request deletion</strong> — contact us and we will delete your account and the personal information attached to it. Verdicts already generated are retained without any link to your account.</li>
+    </ul>
+
+    <h2>9. Children's Privacy</h2>
+    <p>Intel is not intended for users under the age of 18. We do not knowingly collect information from minors. If you believe a minor has provided us with personal information, contact us and we will delete it immediately.</p>
+
+    <h2>10. Changes to This Policy</h2>
+    <p>We may update this Privacy Policy from time to time. Changes will be reflected by updating the "Last updated" date at the top of this page. Continued use of Intel after changes constitutes acceptance of the updated policy.</p>
+
+    <div class="divider"></div>
+
+    <h2>Contact</h2>
+    <p>For privacy-related questions or data requests, reach us on X:</p>
+    <p><a href="https://x.com/intelsolanaapp" target="_blank" rel="noopener noreferrer">@intelsolanaapp</a></p>
+  </div>
+</body>
+</html>

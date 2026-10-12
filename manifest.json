@@ -1,0 +1,81 @@
+{
+  "manifest_version": 3,
+  "name": "Intel",
+  "version": "2.0.3",
+  "description": "Real-time fact-checker for memecoin narratives",
+  "homepage_url": "https://intelapp.tech",
+  "permissions": [
+    "clipboardWrite",
+    "storage"
+  ],
+  "host_permissions": [
+    "https://twitter.com/*",
+    "https://x.com/*",
+    "https://axiom.trade/*",
+    "https://gmgn.ai/*",
+    "https://padre.gg/*",
+    "https://trade.padre.gg/*",
+    "https://intelapp.tech/*"
+  ],
+  "background": {
+    "service_worker": "background/service-worker.js",
+    "type": "module"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://twitter.com/*",
+        "https://x.com/*"
+      ],
+      "js": [
+        "content/render.js",
+        "content/twitter.js",
+        "lockup-data.js",
+        "card.js",
+        "share.js"
+      ],
+      "run_at": "document_idle"
+    },
+    {
+      "matches": [
+        "https://axiom.trade/*",
+        "https://gmgn.ai/*",
+        "https://padre.gg/*",
+        "https://trade.padre.gg/*"
+      ],
+      "js": [
+        "content/render.js",
+        "content/terminals.js",
+        "lockup-data.js",
+        "card.js",
+        "share.js"
+      ],
+      "run_at": "document_idle"
+    },
+    {
+      "matches": [
+        "https://axiom.trade/*"
+      ],
+      "js": [
+        "content/axiom-bridge.js"
+      ],
+      "world": "MAIN",
+      "run_at": "document_idle"
+    }
+  ],
+  "action": {
+    "default_popup": "popup/popup.html",
+    "default_icon": {
+      "16": "assets/icons/icon16.png",
+      "32": "assets/icons/icon32.png",
+      "48": "assets/icons/icon48.png",
+      "128": "assets/icons/icon128.png"
+    }
+  },
+  "icons": {
+    "16": "assets/icons/icon16.png",
+    "32": "assets/icons/icon32.png",
+    "48": "assets/icons/icon48.png",
+    "128": "assets/icons/icon128.png"
+  }
+}

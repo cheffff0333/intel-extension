@@ -1,0 +1,246 @@
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  width: 260px;
+  background: #0d0d0f;
+  color: #fff;
+  font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Text', sans-serif;
+  font-size: 13px;
+}
+
+.view { padding: 16px; }
+.hidden { display: none; }
+
+.logo {
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 0.01em;
+  margin-bottom: 10px;
+  color: rgba(255,255,255,0.7);
+}
+
+.logo-sm {
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.01em;
+  color: rgba(255,255,255,0.6);
+}
+
+.sub {
+  font-size: 11px;
+  color: rgba(255,255,255,0.3);
+  line-height: 1.6;
+  margin-bottom: 14px;
+}
+
+.token-input-wrap {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+#token-input {
+  flex: 1;
+  background: rgba(255,255,255,0.04);
+  border: 0.5px solid rgba(255,255,255,0.08);
+  border-radius: 8px;
+  padding: 8px 10px;
+  color: rgba(255,255,255,0.7);
+  font-size: 11px;
+  outline: none;
+  min-width: 0;
+  font-family: inherit;
+}
+
+#token-input:focus { border-color: rgba(255,255,255,0.2); }
+#token-input::placeholder { color: rgba(255,255,255,0.2); }
+
+#connect-btn {
+  background: #3b82f6;
+  border: none;
+  border-radius: 8px;
+  color: #fff;
+  padding: 8px 12px;
+  font-size: 11px;
+  font-weight: 500;
+  cursor: pointer;
+  white-space: nowrap;
+  flex-shrink: 0;
+  font-family: inherit;
+  transition: background 0.15s;
+}
+
+#connect-btn:hover { background: #2563eb; }
+
+.hint {
+  font-size: 10px;
+  color: rgba(255,255,255,0.18);
+  line-height: 1.6;
+}
+
+.hint code {
+  background: rgba(255,255,255,0.06);
+  padding: 1px 5px;
+  border-radius: 4px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+  padding-bottom: 14px;
+  border-bottom: 0.5px solid rgba(255,255,255,0.05);
+}
+
+.plan-badge {
+  font-size: 9px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 3px 8px;
+  border-radius: 20px;
+}
+
+.plan-badge.free {
+  background: rgba(255,255,255,0.04);
+  color: rgba(255,255,255,0.25);
+  border: 0.5px solid rgba(255,255,255,0.06);
+}
+
+.plan-badge.pro {
+  background: rgba(74,222,128,0.08);
+  color: #4ade80;
+  border: 0.5px solid rgba(74,222,128,0.15);
+}
+
+.section { margin-bottom: 16px; }
+
+.section-label {
+  font-size: 9px;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.18);
+  margin-bottom: 6px;
+}
+
+/* The hidden attribute is only a user-agent style, so .stat-row's display:flex
+   would beat it and render an empty row. The same trap cost an empty box on the
+   dashboard. */
+[hidden] { display: none !important; }
+
+.stat-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 7px 0;
+  border-bottom: 0.5px solid rgba(255,255,255,0.04);
+}
+
+.stat-row:last-child { border-bottom: none; }
+
+.stat-label {
+  font-size: 11px;
+  color: rgba(255,255,255,0.25);
+}
+
+.stat-val {
+  font-size: 11px;
+  font-weight: 500;
+  color: rgba(255,255,255,0.5);
+}
+
+.setting-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 7px 0;
+}
+
+.setting-name {
+  font-size: 11px;
+  color: rgba(255,255,255,0.35);
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 28px;
+  height: 16px;
+  flex-shrink: 0;
+}
+
+.switch input { opacity: 0; width: 0; height: 0; }
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(255,255,255,0.1);
+  border-radius: 16px;
+  transition: 0.2s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 12px;
+  width: 12px;
+  left: 2px;
+  bottom: 2px;
+  background: rgba(255,255,255,0.6);
+  border-radius: 50%;
+  transition: 0.2s;
+}
+
+input:checked + .slider { background: #3b82f6; }
+input:checked + .slider:before {
+  transform: translateX(12px);
+  background: #fff;
+}
+
+#disconnect-btn {
+  width: 100%;
+  background: transparent;
+  border: 0.5px solid rgba(255,255,255,0.06);
+  border-radius: 8px;
+  color: rgba(255,255,255,0.2);
+  padding: 8px;
+  font-size: 11px;
+  cursor: pointer;
+  transition: all 0.15s;
+  font-family: inherit;
+}
+
+#disconnect-btn:hover {
+  border-color: rgba(239,68,68,0.3);
+  color: #f87171;
+}
+
+.plan-badge.basic {
+  background: rgba(59,130,246,0.08);
+  color: #60a5fa;
+  border: 0.5px solid rgba(59,130,246,0.15);
+}
+
+/* Takes people to the site: the dashboard when they are connected, the front
+   page when they are not. Both hrefs come from the API the extension is
+   actually pointed at, so a local build does not link to production. */
+.popup-link {
+  display: block;
+  text-align: center;
+  text-decoration: none;
+  font-size: 12px;
+  color: rgba(255,255,255,0.55);
+  border: 0.5px solid rgba(255,255,255,0.12);
+  border-radius: 7px;
+  padding: 8px;
+  margin-bottom: 8px;
+  transition: color .15s, border-color .15s, background .15s;
+}
+.popup-link:hover {
+  color: rgba(255,255,255,0.92);
+  border-color: rgba(255,255,255,0.22);
+  background: rgba(255,255,255,0.04);
+}

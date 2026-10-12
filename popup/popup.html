@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="popup.css">
+  <title>Intel</title>
+</head>
+<body>
+  <div id="view-onboarding" class="view hidden">
+    <div class="logo">Intel</div>
+    <p class="sub">Paste your account token to start fact-checking.</p>
+    <div class="token-input-wrap">
+      <input type="text" id="token-input" placeholder="Paste your account token" />
+      <button id="connect-btn">Connect</button>
+    </div>
+    <p class="hint">Your token is on your Intel dashboard.</p>
+    <a id="site-link" class="popup-link" href="https://intelapp.tech" target="_blank" rel="noopener noreferrer">Go to intelapp.tech</a>
+    <p id="onboarding-note" class="hint" style="opacity:0.55;font-size:10px;margin-top:6px"></p>
+  </div>
+
+  <div id="view-main" class="view hidden">
+    <div class="header">
+      <span class="logo-sm">Intel</span>
+      <span id="plan-badge" class="plan-badge"></span>
+    </div>
+
+    <div class="section">
+      <div class="section-label">Account</div>
+      <div class="stat-row">
+        <span class="stat-label">Plan</span>
+        <span id="stat-plan" class="stat-val"></span>
+      </div>
+      <div class="stat-row" id="checks-row">
+        <span class="stat-label" id="checks-label">Credits</span>
+        <span id="stat-checks" class="stat-val"></span>
+      </div>
+      <div class="stat-row" id="expiry-row" hidden>
+        <span class="stat-label">Expires</span>
+        <span id="stat-expiry" class="stat-val"></span>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-label">Settings</div>
+      <div class="setting-row">
+        <span class="setting-name">Show on timeline</span>
+        <label class="switch">
+          <input type="checkbox" id="timeline-toggle" checked>
+          <span class="slider"></span>
+        </label>
+      </div>
+    </div>
+
+    <div class="section">
+      <a id="dashboard-link" class="popup-link" href="https://intelapp.tech/dashboard" target="_blank" rel="noopener noreferrer">Go to dashboard</a>
+      <button id="disconnect-btn">Disconnect</button>
+    </div>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
